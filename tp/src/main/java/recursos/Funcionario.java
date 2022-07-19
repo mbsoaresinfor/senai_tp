@@ -16,5 +16,11 @@ public class Funcionario {
 //        return "Nome: " + no;
 //    }
             
+    public String getNome() {
+    	return no;
+    }
+    
+    
+    
     
 }
