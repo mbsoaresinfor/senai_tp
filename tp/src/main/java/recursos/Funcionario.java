@@ -5,7 +5,8 @@ package recursos;
 
 
 public class Funcionario {
-    String no; // nome do func.
+    int id;
+	String no; // nome do func.
     int idade; // idade do funcionario
     String dt; // data de nascimento.
     float s; // salario do funcionario
