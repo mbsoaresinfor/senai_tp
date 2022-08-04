@@ -1,4 +1,4 @@
-package recursos;
+package aula2;
 // INSERIR PACOTE SE NECESSARIO
 
 
@@ -8,21 +8,21 @@ public class CalculadoraPag {
     float resu = 0; // resultado final
     public CalculadoraPag(String nome, int idade,
             String dataNascimento,float salario){
-        Funcionario f = new Funcionario();
-        f.dt = dataNascimento;
-        f.idade = idade;
-        f.no = nome;
-        f.s = salario;    
+        Funcionario funcionario = new Funcionario();
+        funcionario.dataNascimento = dataNascimento;
+        funcionario.idade = idade;
+        funcionario.nome = nome;
+        funcionario.salario = salario;    
 		try{
-			validaFuncionario(f);
+			validaFuncionario(funcionario);
 		}catch(Exception i){
 			System.out.println("errro na validação");
 		}
-        resu = calcula(f);
+        resu = calcula(funcionario);
     }
     
 	void validaFuncionario(Funcionario f) throws Exception{
-		if(f.no.equals("") || f.idade ==0){
+		if(f.nome.equals("") || f.idade ==0){
 			throw new Exception("error funcionario");
 		}
 	}
@@ -35,15 +35,19 @@ public class CalculadoraPag {
 		
 		
         float r = 0;
-        if(f.s < 1000){
-            r = (f.s * 0.1f) + f.s;
+        if(salarioJunior(f)){
+            r = (f.salario * 0.1f) + f.salario;
         }
-        if(f.s > 1000){
-            r = (f.s * 0.2f) + f.s;
+        if(f.salario > 1000){
+            r = (f.salario * 0.2f) + f.salario;
         }
         
         return r;        
     }
+
+	private boolean salarioJunior(Funcionario f) {
+		return f.salario < 1000;
+	}
     
 }
 

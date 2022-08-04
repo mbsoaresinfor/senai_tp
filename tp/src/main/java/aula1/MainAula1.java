@@ -28,7 +28,13 @@ public class MainAula1 {
 		chamarDepositar(cc);
 		chamarDepositar(cp);
 		chamarDepositar(contaPix);
-
+		
+		Impressora imp[] = new Impressora[3];
+		
+	
+		
+		
+		
 	}
 	
 	public static void chamarDepositar(Conta cp) {
