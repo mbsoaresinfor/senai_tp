@@ -11,7 +11,7 @@ public class Main5 {
 		
 		
 		// inserir o log na calculadora
-		Calculadora cal = new Calculadora();
+		Calculadora cal = new Calculadora(null);
 		int res = cal.somar(2, 3);
 		System.out.println("resultado soma: " + res);
 		// inserir o outro log na calculadora
