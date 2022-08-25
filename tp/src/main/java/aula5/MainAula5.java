@@ -33,16 +33,23 @@ public class MainAula5 {
 //		telefone.receberMensagem();
 //		telefone.ligar();
 		
-		PersistenciaImpl persistenciaImpl = 
-				new PersistenciaImpl(new BancoDados());
-		persistenciaImpl.executarPersitencia(new Passagem());
+//		PersistenciaImpl persistenciaImpl = 
+//				new PersistenciaImpl(new BancoDados());
+//		persistenciaImpl.executarPersitencia(new Passagem());
+//		
+//		persistenciaImpl.setPersistencia(new SistemaLocal());
+//		persistenciaImpl.executarPersitencia(new Passagem());
+//		
+//		persistenciaImpl.setPersistencia(new Nuvem());
+//		persistenciaImpl.executarPersitencia(new Passagem());
 		
-		persistenciaImpl.setPersistencia(new SistemaLocal());
-		persistenciaImpl.executarPersitencia(new Passagem());
-		
-		persistenciaImpl.setPersistencia(new Nuvem());
-		persistenciaImpl.executarPersitencia(new Passagem());
+		Calculadora calculadora = new Calculadora(new LogImplA());
+		float soma = calculadora.somar(10, 20);
+		System.out.println("soma = " + soma);
 	
+		calculadora.setLog(new LogImplB());
+		soma = calculadora.somar(20, 20);
+		System.out.println("soma = " + soma);
 
 	}
 
