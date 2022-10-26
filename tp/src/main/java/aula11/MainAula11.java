@@ -1,5 +1,6 @@
 package aula11;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.swing.JOptionPane;
@@ -23,7 +24,7 @@ public class MainAula11 {
 //		thread1.start();
 //		thread2.start();
 //		thread3.start();
-		
+//		
 //		for(int i=0; i < 100; i++) {
 //			MinhaThreadBaixarArquivo t = 
 //					new MinhaThreadBaixarArquivo("TESTE_" +i);
@@ -43,13 +44,19 @@ public class MainAula11 {
 		LogDataThread logDataThread = new LogDataThread();
 		logDataThread.start();
 		
-		while(true) {
-			String nome = JOptionPane.showInputDialog("digite seu nome");
-			JOptionPane.showMessageDialog(null, "seu nome é: " + nome);
-		}
+		
+		SolitaNomeThread nomeThread = new SolitaNomeThread();
+		nomeThread.start();
 		
 		
-		
+//		Date date1 = new Date(1666309264994l);
+//		System.out.println(date1.toGMTString());
+//		
+//		String pattern = "MM/dd/yyyy";
+//		SimpleDateFormat simpleDateFormat 
+//		= new SimpleDateFormat(pattern);
+//		String resultado = simpleDateFormat.format(date1);
+//		System.out.println(resultado);
 		
 		
 
