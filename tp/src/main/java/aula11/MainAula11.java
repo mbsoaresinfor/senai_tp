@@ -1,7 +1,12 @@
 package aula11;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
 
 import javax.swing.JOptionPane;
 
@@ -41,12 +46,12 @@ public class MainAula11 {
 //		ImprimirNumerosThread imprimir3 = new ImprimirNumerosThread("C");
 //		imprimir3.start();
 		
-		LogDataThread logDataThread = new LogDataThread();
-		logDataThread.start();
-		
-		
-		SolitaNomeThread nomeThread = new SolitaNomeThread();
-		nomeThread.start();
+//		LogDataThread logDataThread = new LogDataThread();
+//		logDataThread.start();
+//		
+//		
+//		SolitaNomeThread nomeThread = new SolitaNomeThread();
+//		nomeThread.start();
 		
 		
 //		Date date1 = new Date(1666309264994l);
@@ -59,6 +64,14 @@ public class MainAula11 {
 //		System.out.println(resultado);
 		
 		
+		List<String> nomes = Arrays.asList("ma","bate");
+		List<Integer>listaTamnho = nomes
+			.stream()
+			.map(v -> v.length())
+			.collect(Collectors.toList());
+		
+		System.out.println(listaTamnho);
+		System.out.println(UUID.randomUUID().toString());
 
 	}
 
