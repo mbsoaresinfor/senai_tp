@@ -4,4 +4,11 @@
   <artifactId>tp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Tecnicas de Programacao</name>
+<dependencies>
+<dependency>
+  <groupId>org.modelmapper</groupId>
+  <artifactId>modelmapper</artifactId>
+  <version>3.0.0</version>
+</dependency>
+</dependencies>
 </project>
